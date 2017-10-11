@@ -1,0 +1,51 @@
+
+#spring配置
+spring:
+  #热部署
+  devtools:
+    restart: ture
+  #字符集
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 200MB
+
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://192.168.0.102:3306/JBloc?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: abc123
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  #thymeleaf配置
+  thymeleaf:
+    mode: HTML5
+    #字符编码
+    encoding: utf-8
+    #前缀
+    prefix: classpath:/templates/
+    #后缀
+    suffix: .html
+    #关闭缓存
+    cache: false
+
+#集成mybatis
+mybatis:
+  #扫描mapper生成并注入代理类
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  #配置bean别名
+  type-aliases-package: com.shenyang.bean
+
+#集成log4j
+logging:
+  config: classpath:log4j2.xml
+  level: debug
+
+#字符集处理
+server:
+  tomcat:
+    uri-encoding: UTF-8

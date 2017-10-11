@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="/css/comm.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/part/head.css"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/part/head.js"></script>
+</head>
+<body>
+<div id="head" th:fragment="head">
+    <div id="top">
+        <span class="left">JBloc</span>
+        <span class="right">[<a href="/login">登录</a>] | [<a href="#">注册</a>]</span>
+        <div class="middle">
+            <!--返回主页按钮-->
+            <p class="back_index">返回主页</p>
+            <div class="mask"></div>
+            <img src="/images/logo.jpg" alt="" title=""/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

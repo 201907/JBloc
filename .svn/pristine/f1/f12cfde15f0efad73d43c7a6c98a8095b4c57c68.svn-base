@@ -1,0 +1,20 @@
+package com.shenyang.utils;
+
+import org.junit.Test;
+
+import java.io.IOException;
+
+import static org.junit.Assert.*;
+
+public class Base64UtilTest {
+    @Test
+    public void test(){
+        String str = "YmYtY2ZiLWF1dGg6dGVzdEAxOTIuMTY4LjEwMC4xOjg4ODg=";
+        try {
+            System.out.println(Base64Util.decodeStr(str));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+}

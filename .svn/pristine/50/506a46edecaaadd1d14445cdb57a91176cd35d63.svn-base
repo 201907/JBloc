@@ -1,0 +1,15 @@
+body,div,ol,li,ul,p,dd,dl,dt,h1,h2,h3,h4{
+    margin:0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+}
+#body{
+    width:1024px;
+    font-size: 12px;
+    margin:0 auto;
+}

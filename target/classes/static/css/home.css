@@ -1,0 +1,80 @@
+#main {
+    width: 100%;
+}
+
+#main > .left {
+    width: 250px;
+    -webkit-box-shadow: 0px 0px 5px #ccc;
+    -moz-box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+#main > .left > .icon > img {
+    width: 250px;
+    height: 250px;
+}
+
+#main > .left > ul.user-info {
+    list-style: none;
+    font-size: 16px;
+}
+
+#main > .left > ul.user-info > li {
+    padding-left: 20px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    background: #f1f1f1;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+#main > .left > ul.user-info > li:hover {
+    background: #2a3b5c;
+    color: #ffffff;
+}
+
+#picture {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#picture > img {
+    width: 300px;
+    height: 300px;
+}
+
+#picture, #pic-view {
+    float: left;
+}
+
+#pic-view {
+    height: 200px;
+    width: 200px;
+    left: 30px;
+    top: 40px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px #ccc;
+    -moz-box-shadow: 0px 0px 10px #ccc;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+#pic-view > img {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-body:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0px;
+}

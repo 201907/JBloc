@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link href="/css/home.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/comm.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/imgareaselect-default.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script async="async" type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="150"
+            src="/js/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="/js/jquery.imgareaselect.pack.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
+</head>
+<body>
+<div id="body">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="editIcon">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">编辑头像</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="picture">
+                        <img th:if="${session[login].icon} == null" src="/images/default-icon.jpg" title="" alt=""/>
+                        <img th:if="${session[login].icon} != null" src="/getUserIcon" title="" alt=""/>
+                    </div>
+                    <div id="pic-view">
+                        <img th:if="${session[login].icon} == null" src="/images/default-icon.jpg" title="" alt=""/>
+                        <img th:if="${session[login].icon} != null" src="/getUserIcon" title="" alt=""/>
+                    </div>
+                    <!--通过生成尺寸 后台获取尺寸和旋转角度再进行裁剪-->
+                    <input id="id_top" type="hidden" name="top" value="0"/>
+                    <input id="id_left" type="hidden" name="left" value="0"/>
+                    <input id="id_right" type="hidden" name="right" value="300"/>
+                    <input id="id_bottom" type="hidden" name="bottom" value="300"/>
+                    <input id="file" name="file" type="file" data-url="/uploadIcon"
+                           accept="image/jpeg,image/png,image/gif" style="display:none"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="close" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-default" id="upload">选择图片</button>
+                    <button type="button" class="btn btn-default" id="save">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div id="head" th:replace="/part/head :: head"></div>
+    <div id="main">
+        <div class="left">
+            <div class="icon">
+                <img th:if="${session[login].icon} == null" src="/images/default-icon.jpg" title="" alt=""/>
+                <img th:if="${session[login].icon} != null" src="/getUserIcon" title="" alt=""/>
+            </div>
+            <ul class="user-info">
+                <li class="change-icon" data-toggle="modal" data-target="#editIcon">编辑头像</li>
+                <li>用户信息</li>
+                <li>最新发布</li>
+                <li th:switch="${session[login].level}">用户等级：
+                    <span th:case="3">管理员</span>
+                    <span th:case="2">VIP会员</span>
+                    <span th:case="1">普通会员</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

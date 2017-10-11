@@ -1,0 +1,94 @@
+test1<div><br></div><input type="text" class="code-element" readonly="true" code="package com.shenyang.utils;
+
+import com.google.common.base.Preconditions;
+
+import java.util.List;
+
+public class BlogCodeUtil {
+    private String content;
+    private String contentNoCode;
+    private List<String> codeList;
+
+    public BlogCodeUtil(String content) {
+        this(content, &quot;input&quot;, &quot;code&quot;);
+    }
+
+    public BlogCodeUtil(String content, String htmlTag, String property) {
+        this.setContent(content, htmlTag, property);
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setContent(String content, String htmlTag, String property) {
+        Preconditions.checkNotNull(content, &quot;内容不得为空&quot;);
+        Preconditions.checkNotNull(htmlTag, &quot;必须制定标签&quot;);
+        this.content = content;
+        if (htmlTag == null)
+            contentNoCode = content;
+
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public String getContentNoCode() {
+        return contentNoCode;
+    }
+
+    public List<String> getCodeList() {
+        return codeList;
+    }
+
+}
+" data-original-title="" title=""><div>test2</div><div><br></div><input type="text" class="code-element" readonly="true" code="<!DOCTYPE html>
+<html xmlns:th=&quot;http://www.thymeleaf.org&quot; lang=&quot;zh&quot;>
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;/>
+    <link href=&quot;/css/blog/index.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
+    <link href=&quot;/css/comm.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
+    <link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
+    <link href=&quot;/css/prettify.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
+    <script type=&quot;text/javascript&quot; src=&quot;/js/jquery-3.2.1.min.js&quot;></script>
+    <script type=&quot;text/javascript&quot; src=&quot;/js/bootstrap.min.js&quot;></script>
+    <script type=&quot;text/javascript&quot; src=&quot;/js/run_prettify.js&quot;></script>
+    <script async=&quot;async&quot; type=&quot;text/javascript&quot; color=&quot;255,0,0&quot; opacity='0.7' zIndex=&quot;-2&quot; count=&quot;150&quot;
+            src=&quot;/js/canvas-nest.min.js&quot;></script>
+    <script type=&quot;text/javascript&quot; src=&quot;/js/blog/index.js&quot;></script>
+</head>
+<body>
+<div id=&quot;body&quot;>
+    <div id=&quot;post&quot; class=&quot;btn btn-primary btn-lg&quot; data-toggle=&quot;modal&quot; data-target=&quot;#post-content&quot;>发帖</div>
+    <!-- 发帖模态框 -->
+    <div class=&quot;modal fade&quot; id=&quot;post-content&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot;>
+        <div class=&quot;modal-dialog&quot; role=&quot;document&quot;>
+            <div class=&quot;modal-content&quot;>
+                <div class=&quot;modal-header&quot;>
+                    <button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;><span
+                            aria-hidden=&quot;true&quot;>&amp;times;</span></button>
+                    <h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;>发表博客</h4>
+                    <input id=&quot;title&quot; type=&quot;text&quot; placeholder=&quot;请输入标题&quot;/>
+                </div>
+                <div class=&quot;modal-body&quot;>
+                    <div class=&quot;edui-container&quot; id=&quot;editor&quot; contenteditable=&quot;true&quot;>
+                    </div>
+                </div>
+                <div class=&quot;modal-footer&quot;>
+                    <textarea id=&quot;codearea&quot;></textarea>
+                    <button type=&quot;button&quot; id=&quot;implant-code&quot; class=&quot;btn btn-default&quot;>嵌入代码</button>
+                    <button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;>关闭</button>
+                    <button type=&quot;button&quot; id=&quot;post-commit&quot; class=&quot;btn btn-primary&quot;>发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id=&quot;head&quot; th:replace=&quot;/part/head :: head&quot;></div>
+    <ul class=&quot;calendar&quot;>
+        目前还没有博客
+    </ul>
+</div>
+</body>
+</html>" data-original-title="" title="">

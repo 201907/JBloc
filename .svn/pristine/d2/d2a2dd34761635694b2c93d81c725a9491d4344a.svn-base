@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link href="/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/comm.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/load.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script async="async" type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="150" src="/js/canvas-nest.min.js"></script>
+</head>
+<body>
+<div id="body">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <div class="load_title">正在加载JBloc站点....<br/><span>V1.0</span></div>
+    </div>
+    <div id="head" th:replace="/part/head :: head"></div>
+    <div id="left-section">
+        <ul class="category">
+            <a href="/"><li class="title"><span>Shenyang's Laboatory</span></li></a>
+            <a href="/"><li class="glyphicon glyphicon-home"><span>首页</span></li></a>
+            <a href="#"><li class="glyphicon glyphicon-edit"><span>博客</span></li></a>
+            <a href="#"><li class="glyphicon glyphicon-search"><span>搜索</span></li></a>
+            <a href="#"><li class="glyphicon glyphicon-send"><span id="shadowsocks">Shadowsocks</span></li></a>
+            <a href="#"><li class="glyphicon glyphicon-file"><span>归档</span></li></a>
+            <a href="#"><li class="glyphicon glyphicon-user"><span>关于</span></li></a>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

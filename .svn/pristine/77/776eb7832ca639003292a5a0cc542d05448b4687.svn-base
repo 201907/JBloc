@@ -1,0 +1,9 @@
+// 等待所有加载
+$(window).bind("load",function(){
+    $('body').addClass('loaded');
+    $('#loader-wrapper .load_title').remove();
+})
+//显示二维码
+$("#shadowsocks").click(function(){
+
+})

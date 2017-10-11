@@ -1,0 +1,19 @@
+#spring配置
+spring:
+  #thymeleaf配置
+  thymeleaf:
+    mode: HTML5
+    #字符编码
+    encoding: utf-8
+    #前缀
+    prefix: classpath:/templates/
+    #后缀
+    suffix: .html
+    #关闭缓存
+    cache: false
+#集成mybatis
+mybatis:
+  #扫描mapper生成并注入代理类
+  mapperLocations: classpath*:com/shenyang/dao/impl/*Mapper.xml
+  #配置bean别名
+  typealiasesPackage: com.shenyang.bean

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="/css/part/head.css"/>
+    <script type="text/javascript" src="/js/part/head.js"></script>
+</head>
+<body>
+<div id="head" th:fragment="head">
+    <div id="top">
+        <span class="left">JBloc</span>
+        <span class="right" th:if="${session[login] != null}">欢迎你！
+            <span th:text="${session[login].userName}"></span>&nbsp;
+            [<a href="/home">个人中心</a>] |
+            [<a href="/logout">注销</a>]
+        </span>
+        <span class="right" th:unless="${session[login] != null}">
+            [<a href="/login">登录</a>] | [<a href="/regist">注册</a>]
+        </span>
+        <div class="middle">
+            <!--返回主页按钮-->
+            <p class="back_index">返回主页</p>
+            <div class="mask"></div>
+            <img th:if="${session[login] == null}" src="/images/logo.jpg" alt="" title=""/>
+            <img th:unless="${session[login] == null}" src="/images/logo_r.jpg" alt="" title=""/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

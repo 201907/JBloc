@@ -1,0 +1,134 @@
+#top {
+    margin-bottom: 10px;
+}
+
+#top > .left {
+    color: #828282;
+    float: left;
+}
+
+#top > .right {
+    float: right;
+    color: #828282;
+}
+
+#top > .right > a {
+    color: #636dbc;
+    text-decoration: none;
+}
+
+#top > .right > a:hover {
+    text-decoration: underline;
+}
+
+#top > .middle {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    box-shadow: #cccccc 0px 0px 5px;
+}
+
+#top > .middle > img {
+    height: 98px;
+    width: 1022px;
+    cursor: pointer;
+}
+
+#top > .middle > .mask {
+    width: 1022px;
+    background-color: #fff;
+    position: absolute;
+    top: 45px;
+    cursor: pointer;
+}
+
+#top > .middle > p.back_index {
+    position: absolute;
+    top: 30px;
+    left: 400px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #070d4b;
+    opacity: 0;
+    letter-spacing: 0px;
+    z-index: 1;
+    cursor: pointer;
+    text-shadow: #bc513c 5px 5px 5px;
+    font-style: italic;
+}
+
+#top > .middle:hover .mask {
+    height: 6px;
+    -webkit-animation: mask 0.8s ease forwards;
+    -o-animation: mask 0.8s ease forwards;
+    animation: mask 0.8s ease forwards;
+}
+
+@keyframes mask {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(18) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+@-ms-keyframes mask {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(18) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+@-moz-keyframes mask {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(18) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+@-o-keyframes mask {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(18) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes mask {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(18) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+@-khtml-keyframes mask {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(18) rotate(180deg);
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,145 @@
+#loginForm {
+    position: relative;
+    margin: 150px 0px 0px 260px;
+    padding: 40px 0px 0px 30px;
+    height: 250px;
+    width: 500px;
+    font-weight: bold;
+    color: #171818;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px #ccc;
+    -moz-box-shadow: 0px 0px 10px #ccc;
+    box-shadow: 0px 0px 10px #ccc;
+    z-index: 0;
+    background: url(/images/login/bg.png) 0px 0px no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+#loginForm > h1 {
+    color: #c00002;
+}
+
+#loginForm li {
+    list-style: none;
+    margin: 10px 0px 10px 0px;
+}
+
+#loginForm li > lable, #loginForm li > span {
+    font-size: 15px;
+}
+
+#changeVeriCode {
+    margin-right: 15px;
+}
+
+#codeImg {
+    vertical-align: middle;
+}
+
+#loginForm li > input[type="text"], #loginForm li > input[type="password"] {
+    box-shadow: 0px 0px 5px #949eff;
+    height: 25px;
+    border: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+#loginForm li > input[type="submit"] {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    background: #648fff;
+    border: 0px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+    -webkit-animation: login-key alternate 1.5s infinite;
+    -o-animation: login-key alternate 1.5s infinite;
+    animation: login-key alternate 1.5s infinite;
+}
+
+#loginForm li > input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+@keyframes login-key {
+    0% {
+        -webkit-box-shadow: 0px 0px 5px #06688a;
+        -moz-box-shadow: 0px 0px 5px #06688a;
+        box-shadow: 0px 0px 5px #06688a;
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 150px #8a007f;
+        -moz-box-shadow: 0px 0px 15px #8a007f;
+        box-shadow: 0px 0px 15px #8a007f;
+    }
+}
+
+@-ms-keyframes login-key {
+    0% {
+        -webkit-box-shadow: 0px 0px 5px #06688a;
+        -moz-box-shadow: 0px 0px 5px #06688a;
+        box-shadow: 0px 0px 5px #06688a;
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 150px #8a007f;
+        -moz-box-shadow: 0px 0px 15px #8a007f;
+        box-shadow: 0px 0px 15px #8a007f;
+    }
+}
+
+@-webkit-keyframes login-key {
+    0% {
+        -webkit-box-shadow: 0px 0px 5px #06688a;
+        -moz-box-shadow: 0px 0px 5px #06688a;
+        box-shadow: 0px 0px 5px #06688a;
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 150px #8a007f;
+        -moz-box-shadow: 0px 0px 15px #8a007f;
+        box-shadow: 0px 0px 15px #8a007f;
+    }
+}
+
+#verificaCodeImg {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+#verificaCodeImg:hover {
+    cursor: pointer;
+}
+
+.error {
+    color: #c00002;
+    font-size: 15px;
+}
+
+#changeVeriCode {
+    cursor: pointer;
+    color: #2839ff;
+}
+
+#changeVeriCode:hover {
+    text-decoration: underline;
+}
+
+#auto-login-message {
+    position: absolute;
+    top: 12px;
+    left: 145px;
+    line-height: 35px;
+    font-size:10px;
+    color: #626262;
+}

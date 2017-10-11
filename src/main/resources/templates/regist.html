@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link href="/css/regist.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/comm.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script async="async" type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="150"
+            src="/js/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="/js/regist.js"></script>
+</head>
+<body>
+<div id="body">
+    <div id="head" th:replace="/part/head :: head"></div>
+    <div id="register">
+        <h1>用户注册</h1>
+        <form action="/regist" method="post" id="form-block">
+            <label for="loginName">用户名</label><span>(用户名长度请保持在5~20个字符以内)</span><br/><input type="text"  name="loginName" id="loginName" /><br/>
+            <label for="password">密码</label><span>(请输入5~20位数字或字母)</span><br/><input type="password"  name="password" id="password" /><br/>
+            <label for="commitPass">确认密码</label><br/><input type="password"  name="commitPass" id="commitPass" /><br/>
+            <label for="email">邮箱</label><br/><input type="email"  name="email" id="email"/><br/>
+            <label for="verificaCode">验证码</label><span id="changeVeriCode">点击切换验证码</span>
+            <br/><img id="codeImg" src="/veriCode" alt="" title="" />
+            <input type="text"  name="verificaCode" id="verificaCode" placeholder="请输入验证码"/><br/>
+            <input type="submit" value="注册"/>
+            <input type="hidden" name="_method" value="PUT"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

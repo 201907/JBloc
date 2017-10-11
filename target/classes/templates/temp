@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link href="/css/*.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/comm.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script async="async" type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="150"
+            src="/js/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/js/*.js"></script>
+</head>
+<body>
+<div id="body">
+    <div id="head" th:replace="/part/head :: head"></div>
+</div>
+</body>
+</html>

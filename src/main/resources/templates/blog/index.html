@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+    <title>by shenyang | JBloc</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link href="/css/blog/index.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/comm.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/prettify.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/run_prettify.js"></script>
+    <script async="async" type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="150"
+            src="/js/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/js/blog/index.js"></script>
+    <style>
+        li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+            list-style-type: decimal !important
+        }
+    </style>
+</head>
+<body>
+<div id="body">
+    <div id="post" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#post-content">发帖</div>
+    <!-- 发帖模态框 -->
+    <div class="modal fade" id="post-content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">发表博客</h4>
+                    <input id="title" type="text" placeholder="请输入标题"/>
+                </div>
+                <div class="modal-body">
+                    <div class="edui-container" id="editor" contenteditable="true">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <textarea id="codearea"></textarea>
+                    <button type="button" id="implant-code" class="btn btn-default">嵌入代码</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" id="post-commit" class="btn btn-primary">发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="head" th:replace="/part/head :: head"></div>
+    <ul class="calendar">
+        目前还没有博客
+    </ul>
+    <div id="main">
+        <div class="section" th:each="item,iterStat:${blogContentList}">
+            <div class="head">
+                <input type="hidden" name="blog-id" th:value="${item.id}"/>
+                <span class="title" th:text="${item.title}">A qemu escape - SMC911 exploit</span>
+                <p><span class="post-time" th:text="${'发表于：'+#dates.format(item.createDate,'yyyy-MM-dd hh-mm-ss')}">发表于2017-08-22</span>
+                    <span class="post-user" th:text="${'发表人：'+item.user.userName}">发表人：shenyang</span></p>
+            </div>
+            <div class="content" th:utext="${item.content}"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
